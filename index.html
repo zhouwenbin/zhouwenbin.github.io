@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>farm-vue</title><meta name=viewport content="target-densitydpi=device-dpi,width=1334"><script>function changeViewport() {
+          if (window.screen.width < 1334) {
+              var ratio = window.screen.width / 1334;
+              var metas = document.querySelectorAll("meta[name=viewport]");
+              for (var i in metas) {
+                  if (typeof metas[i].setAttribute == 'function') {
+                      metas[i].setAttribute('content', 'width=1334, initial-scale=' + ratio + ', maximum-scale=' + ratio + '');
+                  }
+              }
+          }
+        }
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", changeViewport, false);</script><link href=static/css/app.69bfcf2ddd0a31f759cefc5dbf6fd960.css rel=stylesheet></head><body><app></app><script type=text/javascript src=static/js/manifest.0ac5792e7940c9092332.js></script><script type=text/javascript src=static/js/vendor.13b12e6ec60d3d3d5ee6.js></script><script type=text/javascript src=static/js/app.c579f87025d39acf1b46.js></script></body></html>
