@@ -1,6 +1,12 @@
 <!DOCTYPE html><html><head><meta charset=utf-8><title>farm-vue</title><meta name=viewport content="target-densitydpi=device-dpi,width=1334"><script>function changeViewport() {
-          if (window.screen.width < 1334) {
-              var ratio = window.screen.width / 1334;
+          if (window.orientation == 180 || window.orientation == 0) {  
+            var windowWidth = window.screen.width;    
+          }  
+          if (window.orientation == 90 || window.orientation == -90) {  
+            var windowWidth = window.screen.height;
+          } 
+          if (windowWidth < 1334) {
+              var ratio = windowWidth / 1334;
               var metas = document.querySelectorAll("meta[name=viewport]");
               for (var i in metas) {
                   if (typeof metas[i].setAttribute == 'function') {
@@ -9,5 +15,4 @@
               }
           }
         }
-        window.addEventListener("orientationchange", changeViewport, false);
-        changeViewport();</script><link href=/static/css/app.e4dd0b7f28d39224b58d5f134c88bca8.css rel=stylesheet></head><body><app></app><script type=text/javascript src=/static/js/manifest.2b0e8d0d337bce181a1b.js></script><script type=text/javascript src=/static/js/vendor.13b12e6ec60d3d3d5ee6.js></script><script type=text/javascript src=/static/js/app.381e06b4a473b4dbbfe9.js></script></body></html>
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", changeViewport, false);</script><link href=/static/css/app.e4dd0b7f28d39224b58d5f134c88bca8.css rel=stylesheet></head><body><app></app><script type=text/javascript src=/static/js/manifest.2b0e8d0d337bce181a1b.js></script><script type=text/javascript src=/static/js/vendor.13b12e6ec60d3d3d5ee6.js></script><script type=text/javascript src=/static/js/app.381e06b4a473b4dbbfe9.js></script></body></html>
