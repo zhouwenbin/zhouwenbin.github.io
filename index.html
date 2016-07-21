@@ -1,13 +1,12 @@
 <!DOCTYPE html><html><head><meta charset=utf-8><title>farm-vue</title><meta name=viewport content="target-densitydpi=device-dpi,width=1334"><script>function changeViewport() {
           var u = navigator.userAgent;
           var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+          var windowWidth;
           
           if (window.orientation == 90 || window.orientation == -90 && isiOS) {  
-            var windowWidth = window.screen.height;
-          } 
-
-          else {
-            var windowWidth = window.screen.width;
+            windowWidth = window.screen.height;
+          } else {
+            windowWidth = window.screen.width;
           }
             
           if (windowWidth < 1334) {
@@ -20,4 +19,4 @@
               }
           }
         }
-        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", changeViewport, false);</script></head><body><div id=root></div><script type=text/javascript src=static/js/manifest.e5e46a693a03986052fd.js></script><script type=text/javascript src=static/js/vendor.cfc4d64e9f22204e4ec1.js></script><script type=text/javascript src=static/js/app.f70f0c5c9724250b594a.js></script></body></html>
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", changeViewport, false);</script></head><body><div id=root></div><script type=text/javascript src=static/js/manifest.a61fdd9530c180fbe92d.js></script><script type=text/javascript src=static/js/vendor.8d962a868b7d0e8ebf34.js></script><script type=text/javascript src=static/js/app.215eef3797254f3508aa.js></script></body></html>
